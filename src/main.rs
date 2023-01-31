@@ -1,10 +1,11 @@
 use actix_web::{App, HttpServer, middleware};
 
 use torch_service::app_config::config_app;
-
+use std::env;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    env::set_var("RUST_BACKTRACE", "full");
     HttpServer::new(|| {
         App::new()
             .configure(config_app)

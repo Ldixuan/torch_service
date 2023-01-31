@@ -14,5 +14,6 @@ pub fn config_app(cfg: &mut web::ServiceConfig) {
             // 
     // );
     cfg
-    .service(predict::chatgpt_predict);
+    .service(predict::chatgpt_predict)
+    .service(predict::minist_predict);
 }

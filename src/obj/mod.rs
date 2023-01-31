@@ -1,3 +1,3 @@
 pub mod data;
-pub mod torch_model;
 pub mod score;
+pub mod predict_result;
